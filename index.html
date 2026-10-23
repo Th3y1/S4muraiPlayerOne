@@ -1,8 +1,89 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<print> Wypierdalajcie z tą grupą śmiecie</print>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Przekierowanie HTML po 5 sekundach jako zabezpieczenie -->
+    <meta http-equiv="refresh" content="5;url=https://suzokustream.vercel.app/">
+    <title>Strona została przeniesiona</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0d0f12;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: #161920;
+            border: 1px solid #282c37;
+            padding: 40px 30px;
+            border-radius: 16px;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #ff4b4b;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #a0a7b5;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #6366f1;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #818cf8;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ta strona została usunięta</h1>
+        <p>Jeśli chcesz dalej oglądać anime pod nową marką, za chwilę przeteleportujemy Cię do odpowiedniej strony.</p>
+        
+        <div class="timer" id="countdown">5</div>
+        
+        <p><small>Jeśli nie przekierowało Cię automatycznie, <a href="https://suzokustream.vercel.app/">kliknij tutaj</a>.</small></p>
+    </div>
+
+    <script>
+        let seconds = 5;
+        const countdownEl = document.getElementById('countdown');
+
+        const interval = setInterval(() => {
+            seconds--;
+            if (seconds >= 0) {
+                countdownEl.textContent = seconds;
+            }
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "https://suzokustream.vercel.app/";
+            }
+        }, 1000);
     </script>
+
 </body>
 </html>
-
